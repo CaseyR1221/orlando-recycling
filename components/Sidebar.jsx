@@ -4,7 +4,7 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-start mb-8">
-            <h3 className="text-3xl pt-8 pb-4 border-b-[2px] border-black w-full">Contact Us</h3>
+            <h3 className="text-3xl pb-4 border-b-[2px] border-black w-full">Contact Us</h3>
             <div className="flex flex-col items-start ml-6">
                 <div className="flex flex-col w-full my-6">
                     <h4 className="text-2xl pb-4">Phone</h4>
