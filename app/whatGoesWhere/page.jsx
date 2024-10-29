@@ -80,9 +80,8 @@ const whatGoesWherePage = () => {
         /Plastic|Glass|Metal|Paper|Cardboard|Wood/i
       );
       const recyclableMatch = label.match(/Recyclable/i);
-      const recyclabilityMessage = `This item is made from ${
-        materialMatch ? materialMatch[0].toLowerCase() : 'unknown materials'
-      }, it is ${recyclableMatch ? 'recyclable' : 'not recyclable'}.`;
+      const recyclabilityMessage = `This item is made from ${materialMatch ? materialMatch[0].toLowerCase() : 'unknown materials'
+        }, it is ${recyclableMatch ? 'recyclable' : 'not recyclable'}.`;
 
       // Process and display recyclability info
       setRecyclabilityInfo(
@@ -126,33 +125,34 @@ const whatGoesWherePage = () => {
                 Finding yourself with extra waste around the holidays? Watch our
                 helpful workshop to find out how you can {' '}
                 <Link href="" className="text-blue-600">
-                  rethink your holiday waste
+                  ReThink Your Holiday Waste
                 </Link>
                 .
               </p>
-              <div className="flex flex-col items-center justify-start w-full h-full bg-gray-100 p-6 mb-8">
+              <div className="flex flex-col items-center justify-start w-full h-full  p-6 mb-8">
                 {/* Search Div */}
-                <div className="relative flex flex-col items-center w-full md:w-[70%] bg-white shadow-md rounded-lg p-6 mb-8">
+                <div className="relative flex flex-col items-center w-full md:w-[100%] bg-white shadow rounded-lg p-6 mb-8">
                   <h1 className="text-2xl font-bold mb-4 text-gray-800 text-center">
                     Search for a Product by Barcode
                   </h1>
 
                   {/* Input for Barcode */}
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-row items-center space-x-4">
                     <input
                       type="text"
                       placeholder="Enter Barcode"
                       value={barcode}
                       onChange={(e) => setBarcode(e.target.value)}
-                      className="w-full p-2 border border-gray-300 rounded-md mb-4"
+                      className="p-2 border border-gray-300 rounded-md"
                     />
                     <button
                       onClick={fetchProductData}
                       className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
                     >
-                      Fetch Product
+                      Search
                     </button>
                   </div>
+
 
                   {/* Error Message */}
                   {error && (
@@ -166,7 +166,7 @@ const whatGoesWherePage = () => {
                 </div>
                 {/* Product Data Display (stays at the bottom) */}
                 {productData && productData.product && (
-                  <div className="w-full md:w-[70%] bg-white shadow-md rounded-lg">
+                  <div className="w-full md:w-[100%] bg-white shadow-md rounded-lg">
                     <div className="flex flex-col md:flex-row items-center md:items-start">
                       {/* Image Section */}
                       <div className="md:w-1/3 mb-4 md:mb-0 p-6">
