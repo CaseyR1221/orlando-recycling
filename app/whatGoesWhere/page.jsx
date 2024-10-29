@@ -20,8 +20,7 @@ const whatGoesWherePage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const nyckelApiKey =
-    'eyJhbGciOiJSUzI1NiIsInR5cCI6ImF0K2p3dCJ9.eyJuYmYiOjE3Mjk4Njk5NTMsImV4cCI6MTcyOTg3MzU1MywiaXNzIjoiaHR0cHM6Ly93d3cubnlja2VsLmNvbSIsImNsaWVudF9pZCI6InU0MnhoZWtseXRpdmdxYzBzOHFxNno3dndhc2o3Z2tnIiwianRpIjoiRjk0MEU5QUM2MTAxNzlFMEM3QTZBNEFEMEE1MUNFMUUiLCJpYXQiOjE3Mjk4Njk5NTMsInNjb3BlIjpbImFwaSJdfQ.cKnP_7T7s-FaLDdyyvHmTEqILnsh_580GnPTo93LRr-r4E9zyzQYKo6Bt4kICLjqv17i9BswmJCKD__EX50HxNZ2kyHJ_acYt4BxenSh8EQTmrTBV9QVs9tzkmigLzxsmxqWUIBMolDrQKgS1cMdyIlp6ZG70Q_FcHmjl4aEgpfdQuxF09wBVvc6Krtf7HX7t4vTXGcUx2l6xSk9deS3NQLFBBN_duMtSRYVkw5iLXcKeOpOAic7dtYD15dWh6R2Hyv1XGRJ97nH06CxNzviyJz0PcdbpHWbi8ebyA495P5AHVC4dQ-5UAn7IW1vBOhllN1eLuT8pLK9Xf99nUH0-g'; // replace with your actual API key
+  const nyckelApiKey = process.env.API_KEY;
 
   const fetchProductData = async () => {
     if (!barcode) {
