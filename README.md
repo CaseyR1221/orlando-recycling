@@ -5,6 +5,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+If you do have Next.js installed localy, you have to install it first, so the app will work.
+npm instal next@latest
+
 npm run dev
 # or
 yarn dev
