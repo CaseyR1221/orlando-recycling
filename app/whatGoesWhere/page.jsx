@@ -123,7 +123,7 @@ const whatGoesWherePage = () => {
               <p className="text-xl pb-6">
                 Finding yourself with extra waste around the holidays? Watch our
                 helpful workshop to find out how you can {' '}
-                <Link href="" className="text-blue-600">
+                <Link href="https://www.youtube.com/watch?v=pG5YPGTpzt4" target='_blank' className="text-blue-600">
                   ReThink Your Holiday Waste
                 </Link>
                 .

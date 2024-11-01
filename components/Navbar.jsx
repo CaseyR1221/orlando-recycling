@@ -102,32 +102,36 @@ const Navbar = () => {
             <Link
               href="/"
               className={`${
-                pathname === '/' ? 'bg-black' : ''
-              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+                pathname === '/' ? 'bg-black text-white' : 'text-blue-700'
+              } rounded-md px-3 py-2`}
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             >
               Home
             </Link>
             <Link
               href="/whatGoesWhere"
               className={`${
-                pathname === '/whatGoesWhere' ? 'bg-black' : ''
-              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+                pathname === '/whatGoesWhere' ? 'bg-black text-white' : 'text-blue-700'
+              } rounded-md px-3 py-2`}
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             >
               What Goes Where
             </Link>
             <Link
               href="/benefits"
               className={`${
-                pathname === '/benefits' ? 'bg-black' : ''
-              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+                pathname === '/benefits' ? 'bg-black text-white' : 'text-blue-700'
+              } rounded-md px-3 py-2`}
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             >
-              Food Waste
+              Benefits
             </Link>
             <Link
               href="/pickupSchedule"
               className={`${
-                pathname === '/pickupSchedule' ? 'bg-black' : ''
-              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+                pathname === '/pickupSchedule' ? 'bg-black text-white' : 'text-blue-700'
+              } rounded-md px-3 py-2`}
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             >
               Pick-Up Schedule
             </Link>

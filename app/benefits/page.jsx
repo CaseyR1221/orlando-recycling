@@ -2,11 +2,15 @@ import Hero from '@/components/Hero';
 import LeftRightGutter from '@/components/LeftRightGutter';
 import Sidebar from '@/components/Sidebar';
 import ContentSectionHeader from '@/components/ContentSectionHeader';
+import BenefitsContainer from '@/components/BenefitsContainer';
 import DropoffLocation from '@/components/DropoffLocation';
 
 import cityImage from '@/assets/images/orlando-city-skyline.jpeg';
+import Benefits from '@/benefits';
 
 const BenefitsPage = () => {
+  const benefits = Benefits;
+
   return (
     <div className="flex flex-col w-full">
       <div
@@ -34,6 +38,9 @@ const BenefitsPage = () => {
                 Lets look at some of the interesting facts about recycling that
                 will hopefully inspire people to participate in this effort.
               </p>
+              <div className='pt-6 pb-12'>
+                <BenefitsContainer benefits={benefits} />
+              </div>
               <p className="text-xl pb-6">
                 If you live in an apartment or condo community, and dont have
                 access to recycling, bring you recyclables to one of our

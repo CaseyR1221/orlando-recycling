@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/assets/images/logo.png';
+import logo from '@//assets/images/cityoforlando_horizontal_logo_official.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bottom-0 left-0 bg-gray-200 py-4 mt-24 w-full">
       <div className="container mx-auto flex flex-row justify-between px-4">
         <div className="mb-4 md:mb-0">
-          <Image src={logo} alt="Logo" className="h-8 w-auto" />
+          <Image src={logo} alt="Logo" className="h-16 w-auto" />
         </div>
 
         <div className="flex flex-col items-start justify-start">
