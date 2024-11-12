@@ -68,9 +68,8 @@ const BarcodeSearch = () => {
         /Plastic|Glass|Metal|Paper|Cardboard|Wood/i
       );
       const recyclableMatch = label.match(/Recyclable/i);
-      const recyclabilityMessage = `This item is made from ${
-        materialMatch ? materialMatch[0].toLowerCase() : 'unknown materials'
-      }, it is ${recyclableMatch ? 'recyclable' : 'not recyclable'}.`;
+      const recyclabilityMessage = `This item is made from ${materialMatch ? materialMatch[0].toLowerCase() : 'unknown materials'
+        }, it is ${recyclableMatch ? 'recyclable' : 'not recyclable'}.`;
 
       // Process and display recyclability info
       setRecyclabilityInfo(
@@ -99,6 +98,7 @@ const BarcodeSearch = () => {
             value={barcode}
             onChange={(e) => setBarcode(e.target.value)}
             className="p-2 border border-gray-300 rounded-md"
+
           />
           <button
             onClick={fetchProductData}
