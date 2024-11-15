@@ -61,7 +61,6 @@ const BarcodeSearch = () => {
         throw new Error('Failed to fetch recyclability information');
       }
       const result = await response.json();
-      console.log(result);
 
       const label = result.labelName;
       const materialMatch = label.match(

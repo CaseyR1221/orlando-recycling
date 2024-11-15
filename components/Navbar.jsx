@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import logo from '@//assets/images/cityoforlando_horizontal_logo_official.png';
-import { FaGoogle } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,6 +20,7 @@ const Navbar = () => {
             <button
               type="button"
               id="mobile-dropdown-button"
+              data-testid="mobile-dropdown-button"
               className="relative inline-flex items-center justify-center rounded-md p-2 text-blue-900 hover:bg-blue-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
@@ -97,10 +97,11 @@ const Navbar = () => {
 
       {/* <!-- Mobile menu, show/hide based on menu state. --> */}
       {isMobileMenuOpen && (
-        <div className="block md:hidden" id="mobile-menu">
+        <div aria-label='mobile-menu' className="block md:hidden" id="mobile-menu">
           <div className="flex flex-col space-y-1 px-2 pb-3 pt-2">
             <Link
               href="/"
+              data-testid="mobile-home-link"
               className={`${
                 pathname === '/' ? 'bg-black text-white' : 'text-blue-700'
               } rounded-md px-3 py-2`}
